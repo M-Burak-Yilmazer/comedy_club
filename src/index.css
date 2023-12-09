@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Ghibo Talk";
+  src: local("Ghibo Talk"), url("./assets/font/Ghibo\ Talk.otf");
+}
+@font-face {
+  font-family: "Starborn";
+  src: local("Starborn"), url("./assets/font/Starborn.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  padding: 1rem;
+  color: white !important;
+  font-family: "Ghibo Talk";
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+}
+
+header img {
+  width: 80px;
+}
+.card-full {
+  width: 200px;
+  height: 250px;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+}
+
+.cardImg {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.cardImg:hover {
+  transform: scale(1.03);
 }
