@@ -56,7 +56,9 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
 
       setCount(count + 1);
       setShow(false);
-      alert(`Sevgili ${data.adSoyad}, seni aramızda görmekten cok mutluyuz... `);
+      alert(
+        `Sevgili ${data.adSoyad}, seni aramızda görmekten cok mutluyuz... `
+      );
       handleModal();
     } else {
       e.preventDefault();
@@ -80,13 +82,20 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header
+          style={{ border: "none", outline: "none" }}
+          className="modalList"
+          closeButton
+        >
           <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+          style={{ border: "none", outline: "none" }}
+          className="modalList"
+        >
           <Form>
             <InputGroup className="mb-3" id="exampleForm.ControlInput1">
-              <InputGroup.Text>Name / Surname</InputGroup.Text>
+              <InputGroup.Text className="text">Name / Surname</InputGroup.Text>
               <Form.Control
                 type="text"
                 name="adSoyad"
@@ -96,7 +105,7 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
               />
             </InputGroup>
             <InputGroup className="mb-3" id="exampleForm.ControlInput1">
-              <InputGroup.Text>Number of Ticket</InputGroup.Text>
+              <InputGroup.Text className="text">Number of Ticket</InputGroup.Text>
               <Form.Control
                 type="number"
                 name="ticket"
@@ -117,7 +126,7 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
             </Form.Group>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer style={{ border:"none", backgroundColor: "black" }}>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

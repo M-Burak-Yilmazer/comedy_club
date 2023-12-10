@@ -65,9 +65,18 @@ header img {
 .ticket-info {
   background-color: black !important;
 }
-.removebtn{
-  position:relative;
-  margin-left:1rem;
-  top:-10px;
-
+.removebtn {
+  position: relative;
+  margin-left: 1rem;
+  top: -10px;
+}
+.modalList {
+  background-color: black;
+  color: brown;
+}
+.text {
+  background-color: brown !important;
+  color: black;
+  font-weight: 500 !important;
+  border: none !important;
 }
