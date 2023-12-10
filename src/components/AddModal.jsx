@@ -106,10 +106,14 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
               />
             </InputGroup>
             <InputGroup className="mb-3" id="exampleForm.ControlInput1">
-              <InputGroup.Text className="text">Number of Ticket</InputGroup.Text>
+              <InputGroup.Text className="text">
+                Number of Ticket
+              </InputGroup.Text>
               <Form.Control
                 type="number"
                 name="ticket"
+                min="1"
+                max="5"
                 value={data.ticket}
                 onChange={handleInputChange}
                 autoFocus
@@ -127,7 +131,7 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
             </Form.Group>
           </Form>
         </Modal.Body>
-        <Modal.Footer style={{ border:"none", backgroundColor: "black" }}>
+        <Modal.Footer style={{ border: "none", backgroundColor: "black" }}>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
