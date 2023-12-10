@@ -2,18 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { FaWindowClose } from "react-icons/fa";
 
-const Ticket = ({ id, adSoyad, day, img, ticket, visited, film ,onDelete}) => {
+const Ticket = ({ id, adSoyad, day, img, ticket, visited, film, onDelete }) => {
   const [show, setShow] = useState(true);
 
   const [consulted, setConsulted] = useState(false);
   function handleClick(e) {
-    onDelete(id)
-    
     setConsulted(!consulted);
   }
   const formattedDate = day ? new Date(day).toLocaleDateString() : "";
   const timeString = day ? new Date(day).toLocaleTimeString() : "";
-
 
   return (
     show && (
@@ -46,11 +43,14 @@ const Ticket = ({ id, adSoyad, day, img, ticket, visited, film ,onDelete}) => {
           </div>
           <div className="d-flex align-items-center justify-content-center ">
             <div>
-              
               <p>{ticket} Person</p>
             </div>
 
-            <div className="removebtn" onClick={() => setShow(false)} style={{ fontSize: "2rem" }}>
+            <div
+              className="removebtn"
+              onClick={() => setShow(false)}
+              style={{ fontSize: "2rem" }}
+            >
               <FaWindowClose />
             </div>
           </div>
