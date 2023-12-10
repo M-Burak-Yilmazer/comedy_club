@@ -16,11 +16,19 @@ const App = () => {
     <div>
       <Header />
       <List onChange={handleFilterChange} />
-      <h1 className="text-center mt-5 display-4 text-white">Ticket Lists</h1>
+      <h1
+        style={{ fontFamily: "Cheese" }}
+        className="text-center mt-5 display-4 text-white"
+      >
+        Ticket Lists
+      </h1>
       <BookList filterValue={filterValue} />
-      <p style={{ fontFamily: "Cheese" }} className="text-center mt-5 text-white">
-        {" "}
-        Copyright ©  Mathias 2023      </p>
+      <p
+        style={{ fontFamily: "Cheese" }}
+        className="text-center mt-5 text-white"
+      >
+        Copyright by © Mathias, Dec 2023
+      </p>
     </div>
   );
 };
