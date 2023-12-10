@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import AddModal from "./AddModal";
 
-function Cards({ img, name, dep, price }) {
+function Cards({ item, onChange }) {
   const [visible, setVisible] = useState(false);
 
   function handleModal() {
@@ -13,7 +13,15 @@ function Cards({ img, name, dep, price }) {
   console.log(visible);
   return (
     <>
-      {visible && <AddModal img={img} name={name} visible={visible} handleModal={handleModal} />}
+      {visible && (
+        <AddModal
+          img={item.img}
+          name={item.name}
+          visible={visible}
+          handleModal={handleModal}
+          onChange={onChange}
+        />
+      )}
       <Card
         className="cardcon"
         style={{
@@ -23,14 +31,14 @@ function Cards({ img, name, dep, price }) {
           color: "white",
         }}
       >
-        {img ==
+        {item.img ==
         "https://www.biletix.com/static/images/live/event/eventimages/wide/2IF63_denizgoktas_wide.png" ? (
           <Card.Img
             style={{ objectFit: "cover" }}
             className="border border-3 border-white cardImg"
             height="250px "
             variant="top"
-            src={img}
+            src={item.img}
           />
         ) : (
           <Card.Img
@@ -38,14 +46,14 @@ function Cards({ img, name, dep, price }) {
             className="border border-3 border-white cardImg"
             height="250px "
             variant="top"
-            src={img}
+            src={item.img}
           />
         )}
 
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
+          <Card.Title>{item.name}</Card.Title>
           <Card.Text>
-            {dep} / Price : {price}
+            {item.dep} / Price : {item.price}
           </Card.Text>
           <Button
             onClick={handleModal}

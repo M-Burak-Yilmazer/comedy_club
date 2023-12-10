@@ -24,17 +24,16 @@ header h1 {
 header img {
   width: 80px;
 }
-.cardcon{
+.cardcon {
   font-family: "Cheese";
-  
 }
-.cardcon button{
+.cardcon button {
   font-family: "Starborn";
-  transition: transform 0.5s ease;}
-  .cardcon button:hover{
-    transform: scale(1.03);
-  }
-
+  transition: transform 0.5s ease;
+}
+.cardcon button:hover {
+  transform: scale(1.03);
+}
 
 .card-full {
   width: 200px;
@@ -52,9 +51,23 @@ header img {
   transform: scale(1.03);
 }
 
-.position-absolute{
-  top: 20px;
-  height:50px;
-  width:100px;
+.position-absolute {
+  top: 10px;
+  height: 60px;
+  width: 120px;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  color: white;
+  background-color: brown;
+}
+
+.ticket-info {
+  background-color: black !important;
+}
+.removebtn{
+  position:relative;
+  margin-left:1rem;
+  top:-10px;
 
 }
