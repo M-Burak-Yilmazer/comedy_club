@@ -3,6 +3,7 @@ import { InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import { v4 as uuidv4 } from "uuid";
 import { ticketDate } from "../helpers/data";
 
 const AddModal = ({ img, name, handleModal, visible, onChange }) => {
@@ -43,7 +44,7 @@ const AddModal = ({ img, name, handleModal, visible, onChange }) => {
         adSoyad: e.target.value,
       });
       const newData = {
-        id: count,
+        id: uuidv4(),
         adSoyad: data.adSoyad,
         day: data.day,
         img: data.img,

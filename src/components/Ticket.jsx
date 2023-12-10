@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { FaWindowClose } from "react-icons/fa";
 
-const Ticket = ({ id, adSoyad, day, img, ticket, visited, film }) => {
+const Ticket = ({ id, adSoyad, day, img, ticket, visited, film ,onDelete}) => {
   const [show, setShow] = useState(true);
 
   const [consulted, setConsulted] = useState(false);
   function handleClick(e) {
+    onDelete(id)
     
     setConsulted(!consulted);
   }
