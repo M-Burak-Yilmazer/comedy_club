@@ -3,6 +3,10 @@
   src: local("Ghibo Talk"), url("./assets/font/Ghibo\ Talk.otf");
 }
 @font-face {
+  font-family: "Cheese";
+  src: local("Cheese Burger"), url("./assets/font/Cheese\ Burger.otf");
+}
+@font-face {
   font-family: "Starborn";
   src: local("Starborn"), url("./assets/font/Starborn.ttf") format("truetype");
 }
@@ -20,6 +24,18 @@ header h1 {
 header img {
   width: 80px;
 }
+.cardcon{
+  font-family: "Cheese";
+  
+}
+.cardcon button{
+  font-family: "Starborn";
+  transition: transform 0.5s ease;}
+  .cardcon button:hover{
+    transform: scale(1.03);
+  }
+
+
 .card-full {
   width: 200px;
   height: 250px;
@@ -34,4 +50,11 @@ header img {
 
 .cardImg:hover {
   transform: scale(1.03);
+}
+
+.position-absolute{
+  top: 20px;
+  height:50px;
+  width:100px;
+
 }
