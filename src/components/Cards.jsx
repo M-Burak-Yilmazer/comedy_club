@@ -31,8 +31,7 @@ function Cards({ item, onChange }) {
           color: "white",
         }}
       >
-        {item.img ==
-        "https://www.biletix.com/static/images/live/event/eventimages/wide/2IF63_denizgoktas_wide.png" ? (
+        {item.img == "./images/2IF63_denizgoktas_wide.png" ? (
           <Card.Img
             style={{ objectFit: "cover" }}
             className="border border-3 border-white cardImg"
