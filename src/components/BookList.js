@@ -14,7 +14,7 @@ const BookList = ({ filterValue }) => {
   ) : (
     <div className="text-center mt-5 mb-3">
       <img
-        style={{ minWidth: "300px", maxWidth: "500px", opacity:"0.2"}}
+        style={{ minWidth: "300px", maxWidth: "428px", opacity: "0.2" }}
         src={image}
         alt=""
       />
